@@ -80,9 +80,11 @@ func getBook(at index: Int) -> (title: String, author: String, price: Double)? {
     var t="",a=""
     let authors:Set<String>= distinctAuthors()
     guard index < bookArray.count else{
+        print("error")
         return nil
     }
     guard index >= 0 else {
+        print("error")
         return nil
     }
     for item in bookArray[index].values{
